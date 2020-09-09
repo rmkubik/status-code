@@ -1,0 +1,32 @@
+{
+  "name": "hyperapp2-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "compress": "rm -f build.zip && zip -r build.zip dist -x *.map dist/report.html && npm run showBundleSize",
+    "showBundleSize": "ls -lh build.zip | cut -d ' ' -f10"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/plugin-transform-react-jsx": "^7.10.4",
+    "@babel/preset-env": "^7.11.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-bundle-visualiser": "^1.2.0",
+    "parcel-plugin-clean-dist": "0.0.6",
+    "parcel-plugin-text": "https://github.com/rmkubik/parcel-plugin-text.git"
+  },
+  "dependencies": {
+    "hyperapp": "^2.0.8"
+  },
+  "parcel-plugin-text": {
+    "replacers": {
+      "escapeBackSlashes": true
+    }
+  }
+}
