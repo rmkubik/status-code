@@ -601,7 +601,8 @@ const Battle = ({
         <p>
           <span style={{ color: "red" }}>Connection attempt FAILED!</span> This
           server is still <span style={{ color: "red" }}>404 Not Found</span>.
-          Try hacking again to retry hack battle.
+          Try hacking again to retry hack battle. End turn to return to The
+          Cloud.
         </p>
       ) : units.every(
           (unit) => unit.owner === 0 || unit.tiles[0].length === 0
@@ -610,7 +611,8 @@ const Battle = ({
         <p>
           <span style={{ color: "green" }}>Connection attempt SUCCEEDED!</span>{" "}
           This server is now <span style={{ color: "green" }}>200 OK</span>.
-          Connection to The Cloud has been re-established.
+          Connection to The Cloud has been re-established. End turn to return to
+          The Cloud.
         </p>
       ) : (
         // default text
