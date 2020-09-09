@@ -137,4 +137,4 @@ const parse = (level) => {
   };
 };
 
-export default [parse(level3), parse(level1), parse(level2)];
+export default [parse(level1), parse(level2), parse(level3)];
