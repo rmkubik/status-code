@@ -201,6 +201,8 @@ const UseAbility = (state, selectedUnitIndex, location) => {
     (unit) => {
       return {
         ...unit,
+        // once you've used an action, you can no longer move
+        moves: [0, unit.moves[1]],
         ap: [unit.ap[0] - 1, unit.ap[1]],
       };
     }
