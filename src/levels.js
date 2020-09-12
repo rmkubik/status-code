@@ -1,6 +1,4 @@
-import level1 from "../assets/level1.txt";
-import level2 from "../assets/level2.txt";
-import level3 from "../assets/level3.txt";
+import levels from "../assets/levels/*.txt";
 
 const parse = (level) => {
   const lines = level.split("\n");
@@ -165,4 +163,4 @@ const parse = (level) => {
   };
 };
 
-export default [parse(level1), parse(level2), parse(level3)];
+export default Object.values(levels).map((level) => parse(level));
