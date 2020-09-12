@@ -503,10 +503,12 @@ const UnitInfo = ({
       <HR />
       <ul>
         {abilities.map((ability, index) => (
-          <li
-            onclick={(state) => ClickAbility(state, index)}
-            class={ability.selected && "selected"}
-          >{`${ability.key} - ${ability.power}`}</li>
+          <li>
+            <button
+              onclick={(state) => ClickAbility(state, index)}
+              class={ability.selected && "selected"}
+            >{`${ability.key} - ${ability.power}`}</button>
+          </li>
         ))}
       </ul>
       <HR />

@@ -59,7 +59,7 @@ const Connection = ({
     <main onclick={(state, event) => AdvanceStep(state, event, steps.length)}>
       {steps.slice(0, step + 1)}
       <p className="" style={{ opacity: 1 }}>
-        Press any key to{" "}
+        Click anywhere to{" "}
         {step === steps.length - 1
           ? "HACK past the rogue virus control programs"
           : "continue"}

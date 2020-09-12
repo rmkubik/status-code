@@ -213,10 +213,10 @@ p {
     cursor: pointer;
   }
 
-  li:hover {
-    // width: fit-content;
-    background-color: $hover-color;
-  }
+  // li:hover {
+  //   // width: fit-content;
+  //   background-color: $hover-color;
+  // }
 
   .selected {
     background-color: $selected-color;

@@ -70,6 +70,6 @@ app({
   node: document.getElementById("app"),
   subscriptions: (state) => [
     state.view === "main" && onClick(Click),
-    state.view === "main" && onKeyDown(Click),
+    // state.view === "main" && onKeyDown(Click),
   ],
 });

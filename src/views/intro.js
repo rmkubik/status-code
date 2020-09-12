@@ -46,7 +46,7 @@ const Intro = ({ intro: { step } }) => {
     <main onclick={(state, event) => AdvanceStep(state, event, steps.length)}>
       {steps.slice(0, step + 1)}
       <p className="" style={{ opacity: 1 }}>
-        Press any key to{" "}
+        Clic anywhere to{" "}
         {step === steps.length - 1 ? (
           <span class="flash animated" style={{ animationDelay: "750ms" }}>
             START

@@ -37,6 +37,20 @@ const parse = (level) => {
             animation: {},
           });
           break;
+        case "X":
+          units.push({
+            icon: [2, 5],
+            bg: "#ff5454",
+            name: "GUARD_AV++",
+            size: 4,
+            abilities: ["bash"],
+            moves: [2, 2],
+            ap: [1, 1],
+            owner: 1,
+            tiles: [[rowIndex, colIndex]],
+            animation: {},
+          });
+          break;
         case "f":
           units.push({
             icon: [0, 6],

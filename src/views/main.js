@@ -7,7 +7,7 @@ const Main = () => {
     <main>
       <pre>{titleTxt}</pre>
       <p>
-        Press any key to continue...{" "}
+        Click anywhere to continue...{" "}
         <span class="flash animated infinite">|</span>
       </p>
     </main>
