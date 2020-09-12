@@ -5,3 +5,4 @@ sling 2 cross3
 ping 1 diamond2
 peek 1 diamond3
 sputter 0 cross1
+spam 1 diamond2

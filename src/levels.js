@@ -135,6 +135,20 @@ const parse = (level) => {
             animation: {},
           });
           break;
+        case "p":
+          units.push({
+            icon: [1, 7],
+            bg: "#ff5454",
+            name: "PHISHER",
+            size: 2,
+            abilities: ["spam"],
+            moves: [2, 2],
+            ap: [1, 1],
+            owner: 1,
+            tiles: [[rowIndex, colIndex]],
+            animation: {},
+          });
+          break;
         default:
           break;
       }
