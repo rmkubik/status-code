@@ -1,5 +1,4 @@
 const fs = require("fs").promises;
-const { writeFile } = require("fs");
 const path = require("path");
 
 const pipe = (...fns) => (x) => fns.reduce((v, f) => f(v), x);
@@ -30,7 +29,7 @@ async function writeBundle(bundlePath, newBundle) {
 }
 
 async function run() {
-  const BUILD_PATH = path.join(process.env.INIT_CWD, "dist");
+  const BUILD_PATH = path.join("dist");
 
   const bundlePath = await getBundlePath(BUILD_PATH);
   const bundle = await readBundle(bundlePath);

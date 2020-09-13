@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html  --public-url .  --no-source-maps",
+    "build": "parcel build src/index.html  --public-url .  --no-source-maps && npm run compress",
     "pruneBuild": "node tasks/prune-js.js",
-    "compress": "npm run pruneBuild && rm -f build.zip && cd dist && zip -r ../build.zip * -x *.map report.html && npm run showBundleSize",
-    "showBundleSize": "ls -lh build.zip | cut -d ' ' -f10"
+    "compress": "npm run pruneBuild && rm -f build.zip && cd dist && zip -r ../build.zip * -x *.map report.html && cd .. && npm run showBundleSize",
+    "showBundleSize": "node tasks/count-bytes.js"
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +17,8 @@
     "@babel/plugin-transform-react-jsx": "^7.10.4",
     "@babel/preset-env": "^7.11.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
+    "common-tags": "^1.8.0",
+    "intl": "^1.2.5",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-bundle-visualiser": "^1.2.0",
     "parcel-plugin-clean-dist": "0.0.6",
