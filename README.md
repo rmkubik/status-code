@@ -8,4 +8,4 @@ The original jam submission was tagged at `1.0.0` and clocked in at 13,144 bytes
 
 Status Code was inspired by an old Lego web game called [Spybotics: The Nightfall Incident](https://brickipedia.fandom.com/wiki/The_Nightfall_Incident).
 
-[🎮 Play it now!](status-code.netlify.app)
+[🎮 Play it now!](https://status-code.netlify.app)
