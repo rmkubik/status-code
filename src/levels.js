@@ -37,7 +37,7 @@ const parse = (level) => {
           break;
         case "X":
           units.push({
-            icon: [2, 5],
+            icon: [3, 2],
             bg: "#ff5454",
             name: "GUARD_AV++",
             size: 4,
@@ -51,7 +51,7 @@ const parse = (level) => {
           break;
         case "f":
           units.push({
-            icon: [0, 6],
+            icon: [2, 0],
             bg: "#ff5454",
             name: "FIREWALL",
             size: 10,
@@ -79,7 +79,7 @@ const parse = (level) => {
           break;
         case "p":
           units.push({
-            icon: [0, 9],
+            icon: [2, 3],
             bg: "#5454ff",
             name: "PING",
             size: 3,
@@ -107,7 +107,7 @@ const parse = (level) => {
           break;
         case "e":
           units.push({
-            icon: [1, 6],
+            icon: [2, 1],
             bg: "#ff5454",
             name: "SENTRY",
             size: 1,
@@ -121,7 +121,7 @@ const parse = (level) => {
           break;
         case "d":
           units.push({
-            icon: [1, 7],
+            icon: [3, 1],
             bg: "#ff5454",
             name: "DUD",
             size: 1,
@@ -149,7 +149,7 @@ const parse = (level) => {
           break;
         case "u":
           units.push({
-            icon: [1, 9],
+            icon: [2, 2],
             bg: "#ff5454",
             name: "CURSOR",
             size: 1,
@@ -163,7 +163,7 @@ const parse = (level) => {
           break;
         case "w":
           units.push({
-            icon: [2, 6],
+            icon: [3, 3],
             bg: "#ff5454",
             name: "TRIP_WIRE",
             size: 1,
@@ -177,7 +177,7 @@ const parse = (level) => {
           break;
         case "b":
           units.push({
-            icon: [2, 7],
+            icon: [2, 4],
             bg: "#5454ff",
             name: "BLITZ",
             size: 2,

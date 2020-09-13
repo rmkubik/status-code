@@ -1,5 +1,5 @@
 com.grate.zone
-2 6
+3 3
 ph....
 s.....
 .....w
