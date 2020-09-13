@@ -32,13 +32,15 @@ const Intro = ({ intro: { step } }) => {
     </p>,
 
     <p className="animated flash" style={{ opacity: 0 }}>
-      Many of the servers that should be working are responding with 404 Not
-      Found.
+      The servers' antivirus software has gone rogue and is preventing
+      connection attempts by responding erroneously with a{" "}
+      <span style={{ color: "red" }}>404 Not Found</span>.
     </p>,
 
     <p className="animated flash" style={{ opacity: 0 }}>
-      Attempt to establish a connection to these servers and return them to the
-      network (200 OK).
+      Attempt to establish a connection to these servers, eradicate the rogue
+      programs, and return them to the network with a{" "}
+      <span style={{ color: "green" }}>200 OK</span> status.
     </p>,
   ];
 
@@ -46,7 +48,7 @@ const Intro = ({ intro: { step } }) => {
     <main onclick={(state, event) => AdvanceStep(state, event, steps.length)}>
       {steps.slice(0, step + 1)}
       <p className="" style={{ opacity: 1 }}>
-        Clic anywhere to{" "}
+        Click anywhere to{" "}
         {step === steps.length - 1 ? (
           <span class="flash animated" style={{ animationDelay: "750ms" }}>
             START

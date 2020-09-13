@@ -24,7 +24,8 @@ const Map = ({ map: { servers } }) => {
           <Server
             sheet={tileSheet}
             icon={server.icon}
-            label={"#" + (index + 1) + " " + server.name}
+            number={index + 1}
+            label={server.name}
             statusCode={server.statusCode}
             onclick={(state) => StartConnection(state, index)}
           />

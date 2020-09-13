@@ -114,12 +114,13 @@ const Sprite = ({
   );
 };
 
-const Server = ({ sheet, icon, label, statusCode, onclick }) => {
+const Server = ({ sheet, icon, label, number, statusCode, onclick }) => {
   const color = Math.floor(statusCode / 100) === 2 ? "green" : "red";
 
   return (
     <div class="server" onclick={onclick}>
       <Sprite sheet={sheet} icon={icon} scale={3} />
+      <p>#{number}</p>
       <p>{label}</p>
       <p class="statusCode">
         <span class="flash animated infinite" style={{ color }}>
