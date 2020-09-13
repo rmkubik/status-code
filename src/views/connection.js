@@ -12,6 +12,7 @@ const StartBattle = (state, index) => {
     map: {
       ...state.map,
       selected: index,
+      turn: 0,
     },
     battle: {
       ...state.battle,

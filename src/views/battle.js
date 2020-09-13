@@ -211,13 +211,23 @@ const UseAbility = (state, selectedUnitIndex, location) => {
     apUpdatedState,
     targetUnitIndex,
     (unit) => {
+      // if there is already an unstarted remove animation, remove current abilitiy's power plus prev ability's removedTiles length
+      const removedTiles =
+        unit.animation.state === "UNSTARTED" &&
+        unit.animation.type === "REMOVED"
+          ? unit.tiles.slice(
+              unit.tiles.length -
+                (ability.power + unit.animation.removedTiles.length)
+            )
+          : unit.tiles.slice(unit.tiles.length - ability.power);
+
       return {
         ...unit,
         animation: {
           type: "REMOVED",
           state: "UNSTARTED",
           bg: unit.bg,
-          removedTiles: unit.tiles.slice(unit.tiles.length - ability.power),
+          removedTiles,
         },
       };
     }
@@ -416,14 +426,13 @@ const EndTurn = (state) => {
 
       const attackOptions = getAllLocations(newState.battle.tiles)
         .filter((neighbor) =>
-          // filter out any neighbors without units on them
+          // filter out any tiles without units on them
           newState.battle.units.some((unit) => isUnitAtLocation(unit, neighbor))
         )
         .filter((neighbor) =>
-          // this may already be validated in our scenario
           isLocationValidAttackTarget(newState.battle, neighbor, newState.moves)
         )
-        // filter out non-player unis to prevent firendly AI fire
+        // filter out non-player units to prevent friendly AI fire
         // check if any option is contained in a the tiles of a non-player unit
         .filter(
           (option) =>

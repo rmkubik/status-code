@@ -96,7 +96,7 @@ const parse = (level) => {
             icon: [1, 4],
             bg: "#5454ff",
             name: "SLING",
-            size: 3,
+            size: 2,
             abilities: ["sling"],
             moves: [1, 1],
             ap: [1, 1],
