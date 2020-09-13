@@ -105,7 +105,7 @@ const Sprite = ({
             transformOrigin: "top left",
             backgroundColor: "red",
             webkitMaskImage: `url(${sheet})`,
-            webkitMaskPosition: `-${5 * TILE_SIZE}px -${0 * TILE_SIZE}px`,
+            webkitMaskPosition: `-${1 * TILE_SIZE}px -${1 * TILE_SIZE}px`,
             position: "absolute",
           }}
         ></div>

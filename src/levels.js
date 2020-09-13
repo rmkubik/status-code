@@ -203,6 +203,20 @@ const parse = (level) => {
             animation: {},
           });
           break;
+        case "z":
+          units.push({
+            icon: [3, 0],
+            bg: "#ff5454",
+            name: "BOSS",
+            size: 6,
+            abilities: ["veto"],
+            moves: [2, 2],
+            ap: [1, 1],
+            owner: 1,
+            tiles: [[rowIndex, colIndex]],
+            animation: {},
+          });
+          break;
         default:
           break;
       }
