@@ -12,10 +12,10 @@ const StartBattle = (state, index) => {
     map: {
       ...state.map,
       selected: index,
-      turn: 0,
     },
     battle: {
       ...state.battle,
+      turn: 0,
       tiles: deepClone(state.map.servers[index].tiles),
       units: deepClone(state.map.servers[index].units),
     },
