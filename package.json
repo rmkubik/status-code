@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html  --public-url .",
-    "compress": "rm -f build.zip && cd dist && zip -r ../build.zip * -x *.map report.html && npm run showBundleSize",
+    "build": "parcel build src/index.html  --public-url .  --no-source-maps",
+    "pruneBuild": "node tasks/prune-js.js",
+    "compress": "npm run pruneBuild && rm -f build.zip && cd dist && zip -r ../build.zip * -x *.map report.html && npm run showBundleSize",
     "showBundleSize": "ls -lh build.zip | cut -d ' ' -f10"
   },
   "author": "",

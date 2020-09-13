@@ -11,7 +11,6 @@ import {
   findUnitAtLocation,
   findUnitIndexAtLocation,
   getNeighbors,
-  findAllIndices,
   manhattanDistance,
   pickRandomlyFromArray,
   getLocationsInArea,

@@ -5,7 +5,7 @@ const parse = (level) => {
   const icon = lines[1].split(" ");
   const units = [];
   const tiles = lines.slice(2).map((row, rowIndex) =>
-    row.split(" ").map((char, colIndex) => {
+    row.split("").map((char, colIndex) => {
       switch (char) {
         case "h":
           units.push({
@@ -133,9 +133,9 @@ const parse = (level) => {
             animation: {},
           });
           break;
-        case "p":
+        case "m":
           units.push({
-            icon: [1, 7],
+            icon: [1, 2],
             bg: "#ff5454",
             name: "PHISHER",
             size: 2,
@@ -163,4 +163,6 @@ const parse = (level) => {
   };
 };
 
-export default Object.values(levels).map((level) => parse(level));
+export default Object.entries(levels)
+  .sort((a, b) => a[0].localeCompare(b[0]))
+  .map(([_, level]) => parse(level));
