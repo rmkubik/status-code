@@ -1,5 +1,5 @@
 com.big_eyes.store
-0 0
+1 6
 .......
 .ph...e
 .......
