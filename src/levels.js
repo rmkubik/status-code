@@ -147,6 +147,48 @@ const parse = (level) => {
             animation: {},
           });
           break;
+        case "u":
+          units.push({
+            icon: [1, 8],
+            bg: "#ff5454",
+            name: "CURSOR",
+            size: 1,
+            abilities: ["click"],
+            moves: [0, 0],
+            ap: [1, 1],
+            owner: 1,
+            tiles: [[rowIndex, colIndex]],
+            animation: {},
+          });
+          break;
+        case "w":
+          units.push({
+            icon: [2, 6],
+            bg: "#ff5454",
+            name: "TRIP_WIRE",
+            size: 1,
+            abilities: ["beam"],
+            moves: [0, 0],
+            ap: [1, 1],
+            owner: 1,
+            tiles: [[rowIndex, colIndex]],
+            animation: {},
+          });
+          break;
+        case "b":
+          units.push({
+            icon: [2, 7],
+            bg: "#5454ff",
+            name: "BLITZ",
+            size: 2,
+            abilities: ["sting"],
+            moves: [4, 4],
+            ap: [1, 1],
+            owner: 0,
+            tiles: [[rowIndex, colIndex]],
+            animation: {},
+          });
+          break;
         default:
           break;
       }

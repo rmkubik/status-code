@@ -216,10 +216,15 @@ const UseAbility = (state, selectedUnitIndex, location) => {
         unit.animation.state === "UNSTARTED" &&
         unit.animation.type === "REMOVED"
           ? unit.tiles.slice(
-              unit.tiles.length -
-                (ability.power + unit.animation.removedTiles.length)
+              // Clamp this slice alue to a minimum of 0. Negative slice index has weird effects:
+              // https://ryankubik.com/blog/negative-index-slice/
+              Math.max(
+                unit.tiles.length -
+                  (ability.power + unit.animation.removedTiles.length),
+                0
+              )
             )
-          : unit.tiles.slice(unit.tiles.length - ability.power);
+          : unit.tiles.slice(Math.max(unit.tiles.length - ability.power, 0));
 
       return {
         ...unit,
