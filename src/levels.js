@@ -189,6 +189,20 @@ const parse = (level) => {
             animation: {},
           });
           break;
+        case "y":
+          units.push({
+            icon: [1, 3],
+            bg: "#5454ff",
+            name: "SPACE_SVR",
+            size: 8,
+            abilities: ["flop"],
+            moves: [3, 3],
+            ap: [1, 1],
+            owner: 0,
+            tiles: [[rowIndex, colIndex]],
+            animation: {},
+          });
+          break;
         default:
           break;
       }

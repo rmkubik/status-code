@@ -9,3 +9,4 @@ spam 2 diamond2
 click 1 square25
 beam 2 cross25
 sting 3 cross1
+flop 1 cross1

@@ -88,12 +88,9 @@ p {
 }
 
 .map {
-  display: flex;
-  flex-direction: row;
-
-  & > .server {
-    margin-left: 4ch;
-  }
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 4ch;
 }
 
 .server {
