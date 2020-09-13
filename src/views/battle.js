@@ -539,7 +539,7 @@ const Battle = ({
 
   return (
     <main>
-      <div class="battle-map">
+      <div>
         <Grid
           sheet={tileSheet}
           tiles={tiles.map((row, rowIndex) =>
@@ -613,6 +613,14 @@ const Battle = ({
       />
       <p>Turn: {turn + 1}</p>
       <button onclick={EndTurn}>End Turn</button>
+      <button
+        onclick={(state) => ({
+          ...state,
+          view: "map",
+        })}
+      >
+        Quit
+      </button>
       {units.every((unit) => unit.owner !== 0 || unit.tiles[0].length === 0) ? (
         // if defeat is true
         <p>
@@ -634,8 +642,7 @@ const Battle = ({
       ) : (
         // default text
         <p>
-          Destroy the enemy programs to re-establish connection between this
-          server and The Cloud.
+          Destroy all enemy programs to re-connect this server to The Cloud.
         </p>
       )}
     </main>

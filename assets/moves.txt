@@ -2,7 +2,7 @@ hack 2 cross1
 bash 2 cross1
 empty 3 cross1
 sling 2 cross3
-ping 1 diamond2
+ping 1 square2
 peek 1 diamond3
 sputter 0 cross1
 spam 2 diamond2

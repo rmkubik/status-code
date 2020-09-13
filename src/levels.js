@@ -149,7 +149,7 @@ const parse = (level) => {
           break;
         case "u":
           units.push({
-            icon: [1, 8],
+            icon: [1, 9],
             bg: "#ff5454",
             name: "CURSOR",
             size: 1,
@@ -182,7 +182,7 @@ const parse = (level) => {
             name: "BLITZ",
             size: 2,
             abilities: ["sting"],
-            moves: [4, 4],
+            moves: [3, 3],
             ap: [1, 1],
             owner: 0,
             tiles: [[rowIndex, colIndex]],

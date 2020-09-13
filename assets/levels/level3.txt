@@ -1,6 +1,5 @@
 com.big_eyes.store
 1 6
-.......
 .ph...e
 .......
 ......X

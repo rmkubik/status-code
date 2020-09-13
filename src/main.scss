@@ -17,6 +17,9 @@ button {
   border: 1px solid white;
   cursor: pointer;
 
+  /* Added for battle buttons */
+  margin-right: 10px;
+
   &:hover {
     background-color: $hover-color;
   }
@@ -39,53 +42,6 @@ p {
 
 .flash {
   animation-name: flash;
-}
-
-@keyframes flash-out {
-  to,
-  from,
-  30% {
-    background-color: 0;
-  }
-
-  15% {
-    opacity: 1;
-  }
-}
-
-.flash-out {
-  animation-name: flash-out;
-}
-
-@keyframes headShake {
-  0% {
-    transform: translateX(0);
-  }
-
-  6.5% {
-    transform: translateX(-6px) rotateY(-9deg);
-  }
-
-  18.5% {
-    transform: translateX(5px) rotateY(7deg);
-  }
-
-  31.5% {
-    transform: translateX(-3px) rotateY(-5deg);
-  }
-
-  43.5% {
-    transform: translateX(2px) rotateY(3deg);
-  }
-
-  50% {
-    transform: translateX(0);
-  }
-}
-
-.headShake {
-  animation-timing-function: ease-in-out;
-  animation-name: headShake;
 }
 
 @keyframes scale-in {
@@ -225,19 +181,4 @@ p {
 
 main {
   max-width: 80ch;
-}
-
-@keyframes slideInDown {
-  from {
-    transform: translate3d(0, -100%, 0);
-    visibility: visible;
-  }
-
-  to {
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.slideInDown {
-  animation-name: slideInDown;
 }
